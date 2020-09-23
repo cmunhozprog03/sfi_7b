@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
            <div class="col-md-4">
-               <h1 class="display-4">Setores</h1>
+               <h1 class="display-4">Serviços</h1>
            </div>
             <div class="col-md-6">
                 <form class="form-inline">
@@ -13,7 +13,7 @@
                 </form>
             </div>
             <div class="col-md-2">
-                <a href="{{route('setores.create')}}" class="btn btn-primary mt-4">Adicionar</a>
+                <a href="{{route('services.create')}}" class="btn btn-primary mt-4">Adicionar</a>
             </div>
         </div>
 
@@ -24,31 +24,25 @@
                 <table class="table table-striped table-hover table-bordered">
                     <thead class="thead-dark">
                         <tr>
+                            <th width="2%">ID</th>
 
-                            <th width="5%">Imagem</th>
                             <th width="35%">Nome</th>
                             <th width="40%">Descrição</th>
-                            <th width="2%">P</th>
-                            <th width="2%">S</th>
+
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($sectors as $sector)
+                    @foreach($services as $service)
                         <tr>
+                            <td>{{$service->id}}</td>
+
+                            <td>{{$service->name}}</td>
+                            <td>{{$service->description}}</td>
 
                             <td>
-                                @if($sector->image)
-                                    <img src="{{url("storage/{$sector->image}")}}" alt="{{$sector->name}}" width="80">
-                                @endif
-                            </td>
-                            <td>{{$sector->name}}</td>
-                            <td>{{$sector->description}}</td>
-                            <td>{{$sector->position}}</td>
-                            <td>{{$sector->condition}}</td>
-                            <td>
                                 <a href="">Detalhes</a>
-                                <a href="{{route('setores.edit', [$sector->id])}}">Editar</a>
+                                <a href="{{route('services.edit', $service->id)}}">Editar</a>
                                 <a href="">Excluit</a>
                             </td>
                         </tr>

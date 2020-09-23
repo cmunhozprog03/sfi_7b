@@ -17,23 +17,23 @@
                 </div>
                 <div class="form-group">
                     <label>Descrição</label>
-                    <input type="text" class="form-control" name="description" value="{{$sector->description}}">
+                    <input type="text" class="form-control" name="description" {{$sector->descripiton}}>
                 </div>
                 <div class="form-group">
                     <label>Descrição Longa</label>
-                    <textarea type="text" class="form-control" name="body" >{{$sector->body}}</textarea>
+                    <textarea type="text" class="form-control" name="body" {{$sector->body}}></textarea>
                 </div>
                 <div class="row">
                     <div class="col-md-2">
                         <div class="form-group">
                             <label>Ordem</label>
-                            <input type="text" class="form-control" name="position" value="{{$sector->position}}">
+                            <input type="text" class="form-control" name="position" {{$sector->position}}>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
                             <label>Ativo</label>
-                            <input type="text" class="form-control" name="condition" value="{{$sector->condition}}">
+                            <input type="text" class="form-control" name="condition" {{$sector->condition}}>
                         </div>
                     </div>
                     <div class="col-md-6">

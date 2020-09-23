@@ -20,26 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e99a734-172c-43e4-9d46-03b6ad3b2020" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generateSlugsFrom('name')" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/main.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/sectors/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/sectors/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/sectors/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saveSlugsTo('slug')" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sfi_7b.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sfi_7b.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Service.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_23_130024_create_services_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style_table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/manager/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/services/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SectorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SectorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SetorTableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SectorTableRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Sector.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,8 +166,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/layouts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -183,6 +176,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projetos\sfi_7b\resources\views\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projetos\sfi_7b\resources\views\admin\layouts" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -199,7 +200,9 @@
       <option name="presentableId" value="Default" />
       <updated>1600810739400</updated>
       <workItem from="1600810740654" duration="251000" />
-      <workItem from="1600811008466" duration="11242000" />
+      <workItem from="1600811008466" duration="11450000" />
+      <workItem from="1600825548378" duration="631000" />
+      <workItem from="1600859146413" duration="10873000" />
     </task>
     <task id="LOCAL-00001" summary="Create migrate sector">
       <created>1600811449749</created>
@@ -215,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600811609966</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sector Index e Create">
+      <created>1600824951723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600824951723</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,12 +241,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create migrate sector" />
     <MESSAGE value="Create controller e request sector" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create controller e request sector" />
+    <MESSAGE value="Sector Index e Create" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sector Index e Create" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="247" key="#Composer" timestamp="1600810810767">
@@ -247,9 +259,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1600814097214" />
-    <state x="274" y="100" key="Vcs.Push.Dialog.v2" timestamp="1600811611690">
+    <state x="274" y="100" key="Vcs.Push.Dialog.v2" timestamp="1600824955370">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="274" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1600811611690" />
+    <state x="274" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1600824955370" />
   </component>
 </project>

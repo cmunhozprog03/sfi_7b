@@ -25,3 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/manager', 'ManagerController')->middleware('auth');
 
 Route::resource('/setores', 'Admin\SectorController');
+
+
+//Route::get('/setores/{id}', 'Admin\SectorController@edit')->name('setores.edit');
+
+Route::resource('/services', 'Admin\ServiceController');

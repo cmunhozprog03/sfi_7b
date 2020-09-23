@@ -4,17 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Sector;
-use App\Http\Requests\SectorTableRequest;
 
-class SectorController extends Controller
+class ServiceController extends Controller
 {
-    private $sector;
-
-    public function __construct(Sector $sector)
-    {
-        $this->sector = $sector;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -22,8 +14,7 @@ class SectorController extends Controller
      */
     public function index()
     {
-        $sectors = $this->sector->paginate(5);
-        return view('admin.sectors.index', compact('sectors'));
+        //
     }
 
     /**
@@ -33,28 +24,18 @@ class SectorController extends Controller
      */
     public function create()
     {
-        return view('admin.sectors.create');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  App\Http\Requests\SectorTableRequest $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SectorTableRequest $request)
+    public function store(Request $request)
     {
-        $data = $request->all();
-
-        if($request->hasFile('image') && $request->image->isValid())
-        {
-            $imagePath = $request->image->store('sectors');
-            $data['image'] = $imagePath;
-        }
-
-
-        $sector = $this->sector->create($data);
-        return redirect()->route('setores.index');
+        //
     }
 
     /**
@@ -76,8 +57,7 @@ class SectorController extends Controller
      */
     public function edit($id)
     {
-        $sector = Sector::find($id);
-        return view('admin.sectors.edit', compact('sector'));
+        //
     }
 
     /**
