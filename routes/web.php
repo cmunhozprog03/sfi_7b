@@ -24,6 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/manager', 'ManagerController')->middleware('auth');
 
+Route::any('/setores/search', 'Admin\SectorController@search')->name('setores.search');
 Route::resource('/setores', 'Admin\SectorController');
 
 

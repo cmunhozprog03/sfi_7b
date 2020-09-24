@@ -1,5 +1,7 @@
 @extends('admin.layouts.main')
 
+@section('title', "Setores")
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -8,8 +10,9 @@
            </div>
             <div class="col-md-6">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2 mt-4" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success mt-4" type="submit">Search</button>
+                    @csrf
+                    <input action="{{route('setores.search')}}" class="form-control mr-sm-2 mt-4" type="search" placeholder="Search" name="filter" aria-label="Search">
+                    <button class="btn btn-outline-success mt-4" type="submit">Pesquisar</button>
                 </form>
             </div>
             <div class="col-md-2">
@@ -57,6 +60,7 @@
                 </table>
             </div>
         </div>
+        {{$sectors->links()}}
     </div>
 
 @endsection

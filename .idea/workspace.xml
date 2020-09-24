@@ -20,17 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e99a734-172c-43e4-9d46-03b6ad3b2020" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Service.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_23_130024_create_services_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style_table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/manager/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/services/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/container.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/sectors/_partials/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SectorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SectorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SectorTableRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SectorTableRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sector.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sector.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/manager/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/manager/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -202,7 +201,7 @@
       <workItem from="1600810740654" duration="251000" />
       <workItem from="1600811008466" duration="11450000" />
       <workItem from="1600825548378" duration="631000" />
-      <workItem from="1600859146413" duration="10873000" />
+      <workItem from="1600859146413" duration="27124000" />
     </task>
     <task id="LOCAL-00001" summary="Create migrate sector">
       <created>1600811449749</created>
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600824951723</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Edit Sector completed">
+      <created>1600874505631</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600874505631</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +254,8 @@
     <MESSAGE value="Create migrate sector" />
     <MESSAGE value="Create controller e request sector" />
     <MESSAGE value="Sector Index e Create" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sector Index e Create" />
+    <MESSAGE value="Edit Sector completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Sector completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="247" key="#Composer" timestamp="1600810810767">
@@ -259,9 +266,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1600814097214" />
-    <state x="274" y="100" key="Vcs.Push.Dialog.v2" timestamp="1600824955370">
+    <state x="274" y="100" key="Vcs.Push.Dialog.v2" timestamp="1600874508265">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="274" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1600824955370" />
+    <state x="274" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1600874508265" />
   </component>
 </project>

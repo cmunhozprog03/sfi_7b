@@ -21,4 +21,15 @@ class Sector extends Model
             ->generateSlugsFrom('name')
             ->saveSlugsTo('slug');
     }
+
+    public function search($filter = null)
+    {
+        $results = $this->where(function($query) use ($filter){
+            if($filter) {
+                $query->where('name', 'LIKE', "%{$filter}%");
+            }
+        })
+            ->paginate();
+        return $results;
+    }
 }

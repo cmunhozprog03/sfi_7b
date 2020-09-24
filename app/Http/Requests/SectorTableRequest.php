@@ -24,7 +24,7 @@ class SectorTableRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:sectors',
+            'name' => 'required',
             'description' => 'required',
             'position' => 'required',
             'condition' => 'required',

@@ -46,6 +46,7 @@ class SectorController extends Controller
     {
         $data = $request->all();
 
+
         if($request->hasFile('image') && $request->image->isValid())
         {
             $imagePath = $request->image->store('sectors');
@@ -87,9 +88,25 @@ class SectorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SectorTableRequest $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $sector = Sector::find($id);
+
+
+
+        if($request->hasFile('image') && $request->image->isValid())
+        {
+            $imagePath = $request->image->store('sectors');
+            $data['image'] = $imagePath;
+        }
+
+        $sector->update($data);
+
+        return redirect()->route('setores.index');
+
+
     }
 
     /**
@@ -102,4 +119,16 @@ class SectorController extends Controller
     {
         //
     }
+
+    /*
+     * Método Search
+     */
+    public function search(Request $request)
+    {
+        $sectors = $this->sector->search($request->filter);
+
+        return view('admin.sectors.index', compact('sectors'));
+    }
+
+
 }
