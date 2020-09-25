@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Sector;
 use App\Http\Requests\SectorTableRequest;
+use Illuminate\Support\Facades\Storage;
 
 class SectorController extends Controller
 {
@@ -66,7 +67,11 @@ class SectorController extends Controller
      */
     public function show($id)
     {
-        //
+
+        if(!$sector = Sector::find($id))
+            return redirect()->back();
+
+        return view('admin.sectors.show', compact('sector'));
     }
 
     /**
@@ -117,18 +122,39 @@ class SectorController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $sector = Sector::find($id);
+        $filename = $sector->image;
+        $sector->delete();
+        Storage::delete($filename);
+        return redirect()->route('setores.index');
+
+        /*
+        if ( $sector->delete() ) {
+            // Deleta a imagem (Não esqueça: use Illuminate\Support\Facades\Storage;)
+            Storage::delete("public/sectors/{$sector->image}"); // true ou false
+
+            // Redireciona, informando que deu tudo certo!
+            return redirect()->route('setores.index')->with('success', 'Sucesso ao deletar!');
+        }
+        */
+
+
+
+
+
     }
 
     /*
      * Método Search
      */
+    /*
     public function search(Request $request)
     {
         $sectors = $this->sector->search($request->filter);
 
         return view('admin.sectors.index', compact('sectors'));
     }
-
+*/
 
 }

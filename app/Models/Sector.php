@@ -21,7 +21,7 @@ class Sector extends Model
             ->generateSlugsFrom('name')
             ->saveSlugsTo('slug');
     }
-
+    /*
     public function search($filter = null)
     {
         $results = $this->where(function($query) use ($filter){
@@ -32,4 +32,7 @@ class Sector extends Model
             ->paginate();
         return $results;
     }
+    */
+
+
 }

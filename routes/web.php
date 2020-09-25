@@ -27,6 +27,9 @@ Route::resource('/manager', 'ManagerController')->middleware('auth');
 Route::any('/setores/search', 'Admin\SectorController@search')->name('setores.search');
 Route::resource('/setores', 'Admin\SectorController');
 
+Route::resource('customers','CustomerController');
+Route::get('customers/{id}/edit/','CustomerController@edit');
+
 
 //Route::get('/setores/{id}', 'Admin\SectorController@edit')->name('setores.edit');
 

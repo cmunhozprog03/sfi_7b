@@ -10,13 +10,13 @@
            </div>
             <div class="col-md-6">
                 <form class="form-inline">
-                    @csrf
-                    <input action="{{route('setores.search')}}" class="form-control mr-sm-2 mt-4" type="search" placeholder="Search" name="filter" aria-label="Search">
+
+                    <input action="#" class="form-control mr-sm-2 mt-4" type="search" placeholder="Search" name="filter" aria-label="Search">
                     <button class="btn btn-outline-success mt-4" type="submit">Pesquisar</button>
                 </form>
             </div>
             <div class="col-md-2">
-                <a href="{{route('setores.create')}}" class="btn btn-primary mt-4">Adicionar</a>
+                <a href="{{route('setores.create')}}" class="btn btn-primary mt-4"><span class="material-icons"> add_circle</span></a>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
                         <tr>
 
                             <th width="5%">Imagem</th>
-                            <th width="35%">Nome</th>
+                            <th width="30%">Nome</th>
                             <th width="40%">Descrição</th>
                             <th width="2%">P</th>
                             <th width="2%">S</th>
@@ -50,9 +50,20 @@
                             <td>{{$sector->position}}</td>
                             <td>{{$sector->condition}}</td>
                             <td>
-                                <a href="">Detalhes</a>
-                                <a href="{{route('setores.edit', [$sector->id])}}">Editar</a>
-                                <a href="">Excluit</a>
+                                <div class="btn-group">
+                                    <form action="">
+                                        <a href="{{route('setores.show', [$sector->id])}}" class="btn  btn-info"><span class="material-icons">visibility</span></a>
+                                    </form>
+                                    <form action="">
+                                        <a href="{{route('setores.edit', [$sector->id])}}" class="btn  btn-warning"><span class="material-icons">create</span></a>
+                                    </form>
+                                        <form action="{{route('setores.destroy', [$sector->id])}}" method="post">
+                                        @csrf
+                                        @method("DELETE")
+                                        <button type="submit" class="btn  btn-danger"><span class="material-icons">delete_forever</span></button>
+                                    </form>
+                                </div>
+
                             </td>
                         </tr>
                     @endforeach

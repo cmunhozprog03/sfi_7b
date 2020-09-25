@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SectorTableRequest extends FormRequest
+class CustomerTableRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,20 +25,7 @@ class SectorTableRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'description' => 'required',
-            'position' => 'required',
-            'condition' => 'required',
-            'image' => 'image',
-
+            'image' => 'image'
         ];
-    }
-    public function message()
-    {
-
-        [
-           'required' => 'Este campo é obrigatório',
-           'image' => 'Arquivo inválido!'
-        ];
-
     }
 }
