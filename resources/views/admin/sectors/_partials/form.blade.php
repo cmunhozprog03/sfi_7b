@@ -1,4 +1,5 @@
 @csrf
+
 <div class="form-group">
     <label>Nome</label>
     <input type="text" class="form-control @error('name') is-invalid @enderror"  value="{{$sector->name ?? old('name')}}" name="name">
@@ -12,7 +13,7 @@
 </div>
 <div class="form-group">
     <label>Descrição</label>
-    <input type="text" class="form-control @error('description') is-invalid @enderror" value="{{$sector->description ?? old('description')}}" name="description">
+    <textarea type="text" class="form-control @error('description') is-invalid @enderror" maxlength="255" name="description">{{$sector->description ?? old('description')}}</textarea>
 
     @error('description')
     <div class="invalid-feedback">
@@ -75,5 +76,8 @@
     </div>
 </div>
 
+<div class="btn-group">
+    <a href="{{route('setores.index')}}" class="btn btn-secondary">Cancelar</a>&nbsp;
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</div>
 
-<button type="submit" class="btn btn-primary">Submit</button>

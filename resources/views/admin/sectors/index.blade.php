@@ -45,10 +45,10 @@
                                     <img src="{{url("storage/{$sector->image}")}}" alt="{{$sector->name}}" width="80">
                                 @endif
                             </td>
-                            <td>{{$sector->name}}</td>
-                            <td>{{$sector->description}}</td>
-                            <td>{{$sector->position}}</td>
-                            <td>{{$sector->condition}}</td>
+                            <td class="w3-large">{{$sector->name}}</td>
+                            <td class="w3-large">{{$sector->description}}</td>
+                            <td class="w3-large">{{$sector->position}}</td>
+                            <td class="w3-large">{{$sector->condition}}</td>
                             <td>
                                 <div class="btn-group">
                                     <form action="">
