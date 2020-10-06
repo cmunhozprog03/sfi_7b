@@ -33,6 +33,9 @@ class Sector extends Model
         return $results;
     }
     */
-
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 
 }

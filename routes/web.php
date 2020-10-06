@@ -30,6 +30,10 @@ Route::resource('/setores', 'Admin\SectorController');
 Route::resource('customers','CustomerController');
 Route::get('customers/{id}/edit/','CustomerController@edit');
 
+Route::resource('/categorias', 'Admin\CategoryController');
+
+Route::resource('/datatable','Admin\TesteDataTableController');
+
 
 //Route::get('/setores/{id}', 'Admin\SectorController@edit')->name('setores.edit');
 

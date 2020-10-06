@@ -20,13 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e99a734-172c-43e4-9d46-03b6ad3b2020" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Search/SectorSearchController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TesteDataTableController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CategoryTableRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/TesteDataTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_26_010943_create_categories_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_26_113906_create_teste_data_tables_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/_partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/datatables/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style_table.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_table.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/_partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/_partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sectors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sectors/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Sector.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Sector.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +172,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/categories/_partials" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -171,11 +183,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projetos\sfi_7b\resources\views\admin\categories\_partials" />
+      <recent name="C:\projetos\sfi_7b\resources\views\admin\layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projetos\sfi_7b\resources\views\admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projetos\sfi_7b\resources\views\admin\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -200,7 +213,16 @@
       <workItem from="1600944690759" duration="7914000" />
       <workItem from="1600955626807" duration="7695000" />
       <workItem from="1600967785488" duration="2085000" />
-      <workItem from="1600982494144" duration="34223000" />
+      <workItem from="1600982494144" duration="35959000" />
+      <workItem from="1601118353845" duration="37000" />
+      <workItem from="1601118435690" duration="4175000" />
+      <workItem from="1601152088585" duration="1318000" />
+      <workItem from="1601306445917" duration="1321000" />
+      <workItem from="1601638287374" duration="3280000" />
+      <workItem from="1601646959284" duration="8091000" />
+      <workItem from="1601658609244" duration="9462000" />
+      <workItem from="1601732282614" duration="3740000" />
+      <workItem from="1601737602691" duration="664000" />
     </task>
     <task id="LOCAL-00001" summary="Create migrate sector">
       <created>1600811449749</created>
@@ -244,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601061411020</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sector index create edit show complete">
+      <created>1601079845250</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601079845250</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +299,8 @@
     <MESSAGE value="Edit Sector completed" />
     <MESSAGE value="Sector Search not complement" />
     <MESSAGE value="sector Show complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="sector Show complete" />
+    <MESSAGE value="sector index create edit show complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="sector index create edit show complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="247" key="#Composer" timestamp="1600810810767">
@@ -281,18 +311,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1600814097214" />
-    <state x="412" y="122" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600994998884">
+    <state x="412" y="122" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601653261045">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="412" y="122" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1600994998884" />
+    <state x="412" y="122" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1601653261045" />
+    <state x="458" y="90" key="NewPhpClassDialog" timestamp="1601733487034">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="458" y="90" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1601733487034" />
     <state x="404" y="110" width="540" height="524" key="StructurePopup" timestamp="1601074827356">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="404" y="110" width="540" height="524" key="StructurePopup/0.0.1366.738@0.0.1366.738" timestamp="1601074827356" />
-    <state x="274" y="100" key="Vcs.Push.Dialog.v2" timestamp="1601061413598">
+    <state x="274" y="100" key="Vcs.Push.Dialog.v2" timestamp="1601079847503">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="274" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1601061413598" />
+    <state x="274" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1601079847503" />
     <state x="346" y="59" key="search.everywhere.popup" timestamp="1601066541584">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
